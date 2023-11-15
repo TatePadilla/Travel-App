@@ -1,8 +1,21 @@
+# Compiled Files
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# Gradle
+/build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+log/
+logs/
 
 ### STS ###
 .apt_generated
@@ -19,6 +32,32 @@ target/
 *.iml
 *.ipr
 
+# Maven
+log/
+target/
+*.iml
+.idea_modules/
+*.ipr
+*.iws
+
+# IDE-specific files
+*.iml
+*.ipr
+*.iws
+
+# Javadoc
+/build/docs/
+
+# Test generated files
+target/generated-test-sources/
+target/generated-sources/
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -31,6 +70,16 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Spring Boot
+spring-boot-starter/target/
+spring-boot-sample/target/
+*.jar
+
+# Other
+/target/
+bin/
+*.class
 
 # Ignore Spring application properties file
 src/main/resources/application.properties
