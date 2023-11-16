@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add New Destination</title>
+<script type="text/javascript">
+	// Form validation code will come here.
+	function validate() {
+
+		// Regex string to ensure only alphanumeric data is entered
+		var regex = /^[\w ]+$/;
+
+		// Ensuring something is entered
+		if (document.myForm.location.value == "") {
+			alert("Please provide a location name!");
+			document.myForm.location.focus();
+			return false;
+		}
+
+		// Ensuring input is alphanumeric
+		if (!regex.test(myForm.location.value)) {
+			alert("Error: Input contains invalid characters!");
+			myForm.location.focus();
+			return false;
+		}
+
+		if (document.myForm.price.value == "") {
+			alert("Please provide a price!");
+			document.myForm.price.focus();
+			return false;
+		}
+
+		// Ensuring price is not outlandish
+		if (document.myForm.price.value > 1000000000) {
+			alert("Please provide a price between 1-10 characters!");
+			document.myForm.price.focus();
+			return false;
+		}
+
+		if (document.myForm.rating.value == "") {
+			alert("Please provide a rating!");
+			document.myForm.rating.focus();
+			return false;
+		}
+
+		if (document.myForm.rating.value > 10) {
+			alert("Please provide a rating between 1-10!");
+			document.myForm.rating.focus();
+			return false;
+		}
+
+		
+
+		if (document.myForm.details.value == "") {
+			alert("Please provide some details!");
+			document.myForm.details.focus();
+			return false;
+		}
+
+		if (!regex.test(myForm.details.value)) {
+			alert("Error: Input contains invalid characters!");
+			myForm.details.focus();
+			return false;
+		}
+
+		if (document.myForm.amenities.value == "") {
+			alert("Please provide some amenities!");
+			document.myForm.amenities.focus();
+			return false;
+		}
+
+		if (!regex.test(myForm.amenities.value)) {
+			alert("Error: Input contains invalid characters!");
+			myForm.amenities.focus();
+			return false;
+		}
+
+		return (true);
+	}
+</script>
+</head>
+<body>
+	<div align="center" class="col-md-12">
+		<h2>Add/update a Destination</h2>
+		<div class="col-md-6">
+
+			<form action="#" name="myForm"
+				th:action="@{/updateDestination/{id}(id=${newDestination.id})}"
+				th:object="${newDestination}" method="post"
+				onsubmit="return(validate());">
+
+				<div class="form-group">
+					<label for="location">location:</label> <input type="text"
+						class="form-control" th:field="*{location}" id="location"
+						name="location" />
+				</div>
+
+				<div class="form-group">
+					<label for="price">Price:</label> <input type="text"
+						class="form-control" th:field="*{price}" id="price" name="price" />
+				</div>
+
+				<div class="form-group">
+					<label for="rating">Rating:</label> <input type="text"
+						class="form-control" th:field="*{rating}" id="rating"
+						name="rating" />
+				</div>
+
+				<div class="form-group">
+					<label for="details">Details:</label> <input type="text"
+						class="form-control" th:field="*{details}" id="details"
+						name="details" />
+				</div>
+
+				<div class="form-group">
+					<label for="amenities">Amenities:</label> <input type="text"
+						class="form-control" th:field="*{amenities}" id="amenities"
+						name="amenities" />
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

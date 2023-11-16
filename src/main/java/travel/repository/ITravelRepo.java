@@ -5,16 +5,11 @@
  */
 package travel.repository;
 
-/**
- * @author Tate
- *
- */
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import travel.beans.Destination;
 
 @Repository
-public interface ITravelRepo extends JpaRepository<Destination, Long>{
-	//Takes the place of helper methods/CRUD methods
+public interface ITravelRepo extends JpaRepository<Destination, Long> {
+	// Takes the place of helper methods/CRUD methods
 }
