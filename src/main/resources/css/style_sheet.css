@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="ISO-8859-1">
-<title>Travel App Home Page</title>
-<style>
+
 * {
 	box-sizing: border-box;
 	width: auto;
@@ -77,14 +71,14 @@ h4 {
 }
 
 h5 {
-	color: hsla(0, 0%, 40%, 1);
-	font-size: small;
+	background-color: skyblue;
+	color: whitesmoke;
+	font-size: 150%;
 	width: auto;
-	border: 5px dotted rgb(190, 184, 4);
-	padding: 20px;
-	margin: 50px;
+	border: 5px outset white;
+	padding: 10px;
+	margin: 25px;
 }
-
 
 .nav-toggle {
 	position: absolute !important;
@@ -161,7 +155,7 @@ nav li {
 }
 
 nav a {
-	color: skyblue;
+	color: white;
 	text-decoration: none;
 	font-size: 1.2rem;
 	text-transform: uppercase;
@@ -233,14 +227,24 @@ nav a:hover {
 	nav a:hover::before {
 		transform: scale(1, 1);
 	}
+	form {
+		margin: 20px;
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 15px;
+	}
+	tr {
+		border: 3px solid black;
+	}
+	td {
+		background-color: skyblue;
+		color: whitesmoke;
+		font-size: 150%;
+		width: auto;
+		border: 5px outset white;
+		padding: 10px;
+		margin: 25px;
+	}
 }
-</style>
-</head>
-<body>
-	<h1>Welcome to the Travel App Home Page</h1>
-	<nav>
-	<a href="addDestination">Add a new Destination</a>
-	<a href="updateDestination">Update a Destination</a>
-	</nav>
-</body>
-</html>
