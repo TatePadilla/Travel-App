@@ -67,5 +67,16 @@ public class WebController {
 		model.addAttribute("Destination", repo.findAll());
 		return "showDestinations";
 	}
+	
+
+	// This method is used to show all existing entities within the /add method
+	@GetMapping({"viewAllDestinations#byPrice" })
+	public String orderDestinationsByPrice(Model model) {
+		if (repo.findAll().isEmpty()) {
+			return add(model);
+		}
+		model.addAttribute("Destination", repo.findAll());
+		return "showDestinations";
+	}
 
 }
