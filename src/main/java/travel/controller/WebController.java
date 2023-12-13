@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.Comparator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import travel.beans.*;
@@ -60,10 +63,12 @@ public class WebController {
 	// This method is used to show all existing entities within the /add method
 	@GetMapping({ "/", "viewAllDestinations" })
 	public String viewDestinations(Model model) {
+
 		if (repo.findAll().isEmpty()) {
 			return add(model);
 		}
 		model.addAttribute("Destination", repo.findAll());
 		return "showDestinations";
 	}
+
 }
