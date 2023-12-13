@@ -310,7 +310,7 @@ nav a:hover {
 	
 	<form>
 		<table>
-			<tr th:each="currentDestination: ${destination}">
+			<tr th:each="currentDestination: ${Destination}">
 				<td th:text="${currentDestination.id}" />
 				<td th:text="${currentDestination.location}" />
 				<td th:text="${currentDestination.price}" />
@@ -334,6 +334,18 @@ nav a:hover {
 		</table>
 		<nav>
 			<a href="../addDestination">Add a New Destination</a>
+		</nav>
+		
+		<nav>
+			<a href="../blog">Blogs Page</a>
+		</nav>
+		
+		<nav>
+			<a href="../login">Login Page</a>
+		</nav>
+		
+		<nav>
+			<a href="../register">Register Page</a>
 		</nav>
 	</form>
 </body>
