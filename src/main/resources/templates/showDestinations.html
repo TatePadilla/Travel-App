@@ -16,11 +16,11 @@ body {
 	background-color: whitesmoke;
 	font-family: 'Roboto', 'courier_primeregular', Verdana, Arial, Helvetica,
 		sans-serif;
-	text-align: center;
 	font-size: 15px;
 	margin: auto;
 	padding: auto;
 	color: black;
+	text-align: center;
 }
 
 p {
@@ -211,7 +211,6 @@ nav a:hover {
 		opacity: 1;
 		position: relative;
 		padding: 3px;
-		
 	}
 	nav a:hover::before {
 		transform: scale(1, 1);
@@ -233,7 +232,7 @@ nav a:hover {
 		border: none;
 		color: skyblue;
 		padding: 16px 32px;
-		text-align: center;
+		text-align: right;
 		text-decoration: none;
 		display: inline-block;
 		font-size: 80%;
@@ -265,12 +264,50 @@ nav a:hover {
 		padding: 10px;
 		margin: 25px;
 	}
+	.dropbtn {
+		background-color: skyblue;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		text-align:right;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown-content a:hover {
+		background-color: #f1f1f1
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	.dropdown:hover .dropbtn {
+		background-color: black;
+	}
 }
 </style>
 </head>
+
+
 <body>
 	<h1>All Destinations:</h1>
-
+	
 	<form>
 		<table>
 			<tr th:each="currentDestination: ${destination}">
