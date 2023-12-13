@@ -71,10 +71,6 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	// no args constructor
-	public User() {
-		super();
-	}
 
 	// username
 	public User(String username) {

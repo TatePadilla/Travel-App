@@ -32,11 +32,6 @@ public class BlogPost {
 	// sets up date
 	private Date date;
 
-	// no args constructor
-	public BlogPost() {
-		super();
-	}
-
 	// title constructor
 	public BlogPost(String title) {
 		super();
