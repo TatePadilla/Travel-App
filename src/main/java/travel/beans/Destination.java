@@ -28,6 +28,6 @@ public class Destination {
 	private double rating;
 	@NotNull(message = "Must add detials")
 	private String details;
-	@NotNull(message = "Must contain data")
+	@NotNull(message = "Must add amenities")
 	private String amenities;
 }
