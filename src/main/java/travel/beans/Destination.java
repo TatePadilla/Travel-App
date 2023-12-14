@@ -20,7 +20,7 @@ public class Destination {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@NotNull(message = "Must contain data")
+	@NotNull(message = "Must add a location")
 	private String location;
 	@NotNull(message = "Must contain data")
 	private double price;
