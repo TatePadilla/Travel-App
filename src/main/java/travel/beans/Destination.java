@@ -22,11 +22,11 @@ public class Destination {
 	private long id;
 	@NotNull(message = "Must add a location")
 	private String location;
-	@NotNull(message = "Must contain data")
+	@NotNull(message = "Must add a price")
 	private double price;
-	@NotNull(message = "Must contain data")
+	@NotNull(message = "Must add a rating")
 	private double rating;
-	@NotNull(message = "Must contain data")
+	@NotNull(message = "Must add detials")
 	private String details;
 	@NotNull(message = "Must contain data")
 	private String amenities;
